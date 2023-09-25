@@ -162,11 +162,10 @@ print(response)
 
 
 # Set with provider
-response = g4f.ChatCompletion.create(
+response = await g4f.ChatCompletion.create_async(
     model="gpt-3.5-turbo",
     provider=g4f.Provider.DeepAi,
-    messages=[{"role": "user", "content": "Hello world"}],
-    stream=True,
+    messages=[{"role": "user", "content": "Hello world"}]
 )
 
 for message in response:
